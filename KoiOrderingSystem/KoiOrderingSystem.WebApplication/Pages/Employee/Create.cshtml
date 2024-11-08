@@ -1,0 +1,52 @@
+﻿@page
+@model KoiOrderingSystem.WebApplication.Pages.Employee.CreateModel
+
+<h4>KoiOrderEmployee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="KoiOrderEmployee.RoleId" class="control-label"></label>
+                <select asp-for="KoiOrderEmployee.RoleId" class ="form-control" asp-items="ViewBag.RoleId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="KoiOrderEmployee.Username" class="control-label"></label>
+                <input asp-for="KoiOrderEmployee.Username" class="form-control" />
+                <span asp-validation-for="KoiOrderEmployee.Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KoiOrderEmployee.Password" class="control-label"></label>
+                <input asp-for="KoiOrderEmployee.Password" class="form-control" />
+                <span asp-validation-for="KoiOrderEmployee.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KoiOrderEmployee.Name" class="control-label"></label>
+                <input asp-for="KoiOrderEmployee.Name" class="form-control" />
+                <span asp-validation-for="KoiOrderEmployee.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KoiOrderEmployee.Phone" class="control-label"></label>
+                <input asp-for="KoiOrderEmployee.Phone" class="form-control" />
+                <span asp-validation-for="KoiOrderEmployee.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KoiOrderEmployee.Email" class="control-label"></label>
+                <input asp-for="KoiOrderEmployee.Email" class="form-control" />
+                <span asp-validation-for="KoiOrderEmployee.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

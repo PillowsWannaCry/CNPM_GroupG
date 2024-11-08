@@ -1,0 +1,49 @@
+﻿@page
+@model KoiOrderingSystem.WebApplication.Pages.Customer.DetailsModel
+
+<div>
+    <h4>KoiOrderCustomer</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.KoiOrderCustomer.Username)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.KoiOrderCustomer.Username)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.KoiOrderCustomer.Password)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.KoiOrderCustomer.Password)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.KoiOrderCustomer.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.KoiOrderCustomer.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.KoiOrderCustomer.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.KoiOrderCustomer.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.KoiOrderCustomer.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.KoiOrderCustomer.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.KoiOrderCustomer.CreatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.KoiOrderCustomer.CreatedDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.KoiOrderCustomer.CustomerId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

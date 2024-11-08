@@ -1,0 +1,15 @@
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\bin\Debug\net8.0\KoiOrderingSystem.Services.deps.json
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\bin\Debug\net8.0\KoiOrderingSystem.Services.dll
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\bin\Debug\net8.0\KoiOrderingSystem.Services.pdb
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\bin\Debug\net8.0\KoiOrderingSystem.Repositories.dll
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\bin\Debug\net8.0\KoiOrderingSystem.Repositories.pdb
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\obj\Debug\net8.0\KoiOrderingSystem.Services.csproj.AssemblyReference.cache
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\obj\Debug\net8.0\KoiOrderingSystem.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\obj\Debug\net8.0\KoiOrderingSystem.Services.AssemblyInfoInputs.cache
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\obj\Debug\net8.0\KoiOrderingSystem.Services.AssemblyInfo.cs
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\obj\Debug\net8.0\KoiOrderingSystem.Services.csproj.CoreCompileInputs.cache
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\obj\Debug\net8.0\KoiOrder.0788EA1E.Up2Date
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\obj\Debug\net8.0\KoiOrderingSystem.Services.dll
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\obj\Debug\net8.0\refint\KoiOrderingSystem.Services.dll
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\obj\Debug\net8.0\KoiOrderingSystem.Services.pdb
+D:\Học\CNPM\WebSite\KoiOrderingSystem\KoiOrderingSystem.Services\obj\Debug\net8.0\ref\KoiOrderingSystem.Services.dll
