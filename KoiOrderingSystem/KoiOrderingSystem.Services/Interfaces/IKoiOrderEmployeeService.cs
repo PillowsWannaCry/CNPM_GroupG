@@ -13,5 +13,6 @@ namespace KoiOrderingSystem.Services.Interfaces
         IQueryable<KoiOrderEmployee> KoiOrderEmployees();
         Task<bool> UpdateKoiOrderEmployee(KoiOrderEmployee account);
         Task<bool> SaveChangesAsync();
+        Task<bool> EmployeeExistsAsync(int id);
     }
 }

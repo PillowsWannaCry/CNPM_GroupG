@@ -10,40 +10,47 @@ namespace KoiOrderingSystem.WebApplication.Pages.Employee
     public class CreateModel : PageModel
     {
         private readonly IKoiOrderEmployeeService _service;
-        private readonly KoiOrderingSystemContext _context; 
+        private readonly IKoiOrderRoleService _roleService;
 
-        public CreateModel(IKoiOrderEmployeeService service, KoiOrderingSystemContext context)
+        public CreateModel(IKoiOrderEmployeeService service, IKoiOrderRoleService roleService)
         {
             _service = service;
-            _context = context;
+            _roleService = roleService;
         }
 
         [BindProperty]
         public KoiOrderEmployee KoiOrderEmployee { get; set; } = default!;
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
-            ViewData["RoleId"] = new SelectList(_context.Roles, "RoleId", "RoleName");
+            var roles = await _roleService.GetAllRolesAsync();
+            ViewData["RoleId"] = new SelectList(roles, "RoleId", "RoleName");
             return Page();
         }
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
-                return Page(); 
+                /*var roles = await _roleService.GetAllRolesAsync();
+                ViewData["RoleId"] = new SelectList(roles, "RoleId", "RoleName");*/
+                return Page();
             }
 
             var result = await _service.AddKoiOrderEmployee(KoiOrderEmployee);
-
             if (result)
             {
                 return RedirectToPage("./Index");
             }
-            else
+            _service.AddKoiOrderEmployee(KoiOrderEmployee);
+            return RedirectToPage("./Index");
+            /*else
             {
                 ModelState.AddModelError(string.Empty, "Không thể thêm nhân viên. Vui lòng thử lại.");
+                var roles = await _roleService.GetAllRolesAsync();
+                ViewData["RoleId"] = new SelectList(roles, "RoleId", "RoleName");
                 return Page();
-            }
+            }*/
         }
     }
 }

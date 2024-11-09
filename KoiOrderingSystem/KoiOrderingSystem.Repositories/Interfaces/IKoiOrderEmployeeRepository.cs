@@ -13,5 +13,7 @@ namespace KoiOrderingSystem.Repositories.Interfaces
         Task<KoiOrderEmployee> GetKoiOrderEmployeeById(int Id);
         IQueryable<KoiOrderEmployee> GetAllKoiOrderEmployees();
         Task<int> SaveChangesAsync();
+
+        Task<bool> EmployeeExistsAsync(int id);
     }
 }

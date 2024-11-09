@@ -16,9 +16,11 @@ builder.Services.AddDbContext<KoiOrderingSystemContext>();
 // DI Repositories
 builder.Services.AddScoped<IKoiOrderCustomerRepository, KoiOrderCustomerRepository>();
 builder.Services.AddScoped<IKoiOrderEmployeeRepository, KoiOrderEmployeeRepository>();
+builder.Services.AddScoped<IKoiOrderRoleRepository, KoiOrderRoleRepository>();
 // DI   Service
 builder.Services.AddScoped<IKoiOrderCustomerService, KoiOrderCustomerService>();
 builder.Services.AddScoped<IKoiOrderEmployeeService, KoiOrderEmployeeService>();
+builder.Services.AddScoped<IKoiOrderRoleService, KoiOrderRoleService>();
 var app = builder.Build();  
 
 // Configure the HTTP request pipeline.

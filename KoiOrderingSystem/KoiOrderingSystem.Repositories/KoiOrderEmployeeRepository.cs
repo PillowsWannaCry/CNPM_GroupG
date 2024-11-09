@@ -80,7 +80,9 @@ namespace KoiOrderingSystem.Repositories
 
         public async Task<KoiOrderEmployee> GetKoiOrderEmployeeById(int Id)
         {
-            return await _context.KoiOrderEmployees.FindAsync(Id);
+            return await _context.KoiOrderEmployees
+                .Include(e => e.Role)  
+                .FirstOrDefaultAsync(e => e.EmployeeId == Id);
         }
 
         public IQueryable<KoiOrderEmployee> GetAllKoiOrderEmployees()
@@ -99,6 +101,10 @@ namespace KoiOrderingSystem.Repositories
             {
                 return 0;
             }
+        }
+        public async Task<bool> EmployeeExistsAsync(int id)
+        {
+            return await _context.KoiOrderEmployees.AnyAsync(e => e.EmployeeId == id);  
         }
     }
 }

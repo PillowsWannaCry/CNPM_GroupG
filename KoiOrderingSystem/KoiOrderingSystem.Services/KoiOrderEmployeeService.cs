@@ -1,6 +1,7 @@
 ﻿using KoiOrderingSystem.Repositories.Entities;
 using KoiOrderingSystem.Repositories.Interfaces;
 using KoiOrderingSystem.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Linq;
@@ -57,6 +58,11 @@ namespace KoiOrderingSystem.Services
         public async Task<bool> UpdateKoiOrderEmployee(KoiOrderEmployee account)
         {
             return await _repository.UpdateKoiOrderEmployee(account);
+        }
+
+        public async Task<bool> EmployeeExistsAsync(int id)
+        {
+            return await _repository.EmployeeExistsAsync(id);  
         }
     }
 }
