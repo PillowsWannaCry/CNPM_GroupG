@@ -6,16 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using KoiOrderingSystem.Repositories.Entities;
+using KoiOrderingSystem.Services.Interfaces;
 
 namespace KoiOrderingSystem.WebApplication.Pages.EmployeeManagement
 {
     public class DetailsModel : PageModel
     {
-        private readonly KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext _context;
+        private readonly IKoiOrderEmployeeService   _service;
 
-        public DetailsModel(KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext context)
+        public DetailsModel(IKoiOrderEmployeeService service)
         {
-            _context = context;
+            _service = service;
         }
 
         public KoiOrderEmployee KoiOrderEmployee { get; set; } = default!;
@@ -27,7 +28,7 @@ namespace KoiOrderingSystem.WebApplication.Pages.EmployeeManagement
                 return NotFound();
             }
 
-            var koiorderemployee = await _context.KoiOrderEmployees.FirstOrDefaultAsync(m => m.EmployeeId == id);
+            var koiorderemployee = await _service.GetEmployeeByIdAsync(id.Value);
             if (koiorderemployee == null)
             {
                 return NotFound();

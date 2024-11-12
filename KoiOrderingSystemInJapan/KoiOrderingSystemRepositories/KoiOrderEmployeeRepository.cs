@@ -15,14 +15,16 @@ namespace KoiOrderingSystem.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<KoiOrderEmployee>> GetAllEmployeesAsync()
+        public IQueryable<KoiOrderEmployee> GetAllKoiOrderEmployees()
         {
-            return await _context.KoiOrderEmployees.ToListAsync();
+            return _context.KoiOrderEmployees.AsQueryable();
         }
 
         public async Task<KoiOrderEmployee?> GetEmployeeByIdAsync(int employeeId)
         {
-            return await _context.KoiOrderEmployees.FindAsync(employeeId);
+            return await _context.KoiOrderEmployees
+                         .Include(e => e.Role)  
+                         .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
         }
 
         public async Task<bool> AddEmployeeAsync(KoiOrderEmployee employee)
@@ -48,6 +50,10 @@ namespace KoiOrderingSystem.Repositories
         public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
+        }
+        public async Task<bool> EmployeeExistsAsync(int id)
+        {
+            return await _context.KoiOrderEmployees.AnyAsync(e => e.EmployeeId == id);
         }
     }
 }

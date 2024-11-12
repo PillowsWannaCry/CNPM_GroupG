@@ -7,16 +7,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using KoiOrderingSystem.Repositories.Entities;
+using KoiOrderingSystem.Services.Interfaces;
 
 namespace KoiOrderingSystem.WebApplication.Pages.EmployeeManagement
 {
     public class EditModel : PageModel
     {
-        private readonly KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext _context;
+        private readonly IKoiOrderEmployeeService _service;
+        private readonly IKoiOrderRoleService _roleService;
 
-        public EditModel(KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext context)
+        public EditModel(IKoiOrderEmployeeService service, IKoiOrderRoleService roleService)
         {
-            _context = context;
+            _service = service;
+            _roleService = roleService;
         }
 
         [BindProperty]
@@ -29,49 +32,43 @@ namespace KoiOrderingSystem.WebApplication.Pages.EmployeeManagement
                 return NotFound();
             }
 
-            var koiorderemployee =  await _context.KoiOrderEmployees.FirstOrDefaultAsync(m => m.EmployeeId == id);
+            var koiorderemployee = await _service.GetEmployeeByIdAsync(id.Value);
             if (koiorderemployee == null)
             {
                 return NotFound();
             }
             KoiOrderEmployee = koiorderemployee;
-           ViewData["RoleId"] = new SelectList(_context.Roles, "RoleId", "RoleName");
+            var roles = await _roleService.GetAllRolesAsync();
+            ViewData["RoleId"] = new SelectList(roles, "RoleId", "RoleName");
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
+                var roles = await _roleService.GetAllRolesAsync();
+                ViewData["RoleId"] = new SelectList(roles, "RoleId", "RoleName");
                 return Page();
             }
 
-            _context.Attach(KoiOrderEmployee).State = EntityState.Modified;
+            var updateResult = await _service.UpdateEmployeeAsync(KoiOrderEmployee);
 
-            try
+            if (!updateResult)
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!KoiOrderEmployeeExists(KoiOrderEmployee.EmployeeId))
+                if (!await _service.EmployeeExistsAsync(KoiOrderEmployee.EmployeeId))
                 {
                     return NotFound();
                 }
                 else
                 {
-                    throw;
+                    ModelState.AddModelError(string.Empty, "Cập nhật nhân viên thất bại. Vui lòng thử lại.");
+                    return Page();
                 }
             }
 
             return RedirectToPage("./Index");
-        }
 
-        private bool KoiOrderEmployeeExists(int id)
-        {
-            return _context.KoiOrderEmployees.Any(e => e.EmployeeId == id);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace KoiOrderingSystem.Services
             _repository = repository;
         }
 
-        public bool AddKoiOrderCustomer(KoiOrderCustomer account)
+        public Task <bool>AddKoiOrderCustomer(KoiOrderCustomer account)
         {
             return _repository.AddKoiOrderCustomer(account);
         }

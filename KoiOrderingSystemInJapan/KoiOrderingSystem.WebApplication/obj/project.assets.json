@@ -7757,11 +7757,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystem.WebApplication\\KoiOrderingSystem.WebApplication.csproj",
+      "projectUniqueName": "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystem.WebApplication\\KoiOrderingSystem.WebApplication.csproj",
       "projectName": "KoiOrderingSystem.WebApplication",
-      "projectPath": "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystem.WebApplication\\KoiOrderingSystem.WebApplication.csproj",
+      "projectPath": "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystem.WebApplication\\KoiOrderingSystem.WebApplication.csproj",
       "packagesPath": "C:\\Users\\brusl\\.nuget\\packages\\",
-      "outputPath": "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystem.WebApplication\\obj\\",
+      "outputPath": "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystem.WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7782,8 +7782,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystemServices\\KoiOrderingSystem.Services.csproj": {
-              "projectPath": "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystemServices\\KoiOrderingSystem.Services.csproj"
+            "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystemServices\\KoiOrderingSystem.Services.csproj": {
+              "projectPath": "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystemServices\\KoiOrderingSystem.Services.csproj"
             }
           }
         }

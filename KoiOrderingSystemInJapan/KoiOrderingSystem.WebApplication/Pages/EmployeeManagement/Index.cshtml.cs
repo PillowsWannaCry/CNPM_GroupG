@@ -6,24 +6,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using KoiOrderingSystem.Repositories.Entities;
+using KoiOrderingSystem.Services.Interfaces;
 
 namespace KoiOrderingSystem.WebApplication.Pages.EmployeeManagement
 {
     public class IndexModel : PageModel
     {
-        private readonly KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext _context;
+        private readonly IKoiOrderEmployeeService _service;
 
-        public IndexModel(KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext context)
+        public IndexModel(IKoiOrderEmployeeService service)
         {
-            _context = context;
+            _service = service;
         }
 
         public IList<KoiOrderEmployee> KoiOrderEmployee { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            KoiOrderEmployee = await _context.KoiOrderEmployees
-                .Include(k => k.Role).ToListAsync();
+            KoiOrderEmployee = await _service.KoiOrderEmployees()
+                                    .Include(k => k.Role)
+                                    .ToListAsync();
         }
     }
 }

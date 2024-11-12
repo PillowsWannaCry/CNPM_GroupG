@@ -6,39 +6,60 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using KoiOrderingSystem.Repositories.Entities;
+using KoiOrderingSystem.Services.Interfaces;
+using System.Data;
 
 namespace KoiOrderingSystem.WebApplication.Pages.EmployeeManagement
 {
     public class CreateModel : PageModel
     {
-        private readonly KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext _context;
+        private readonly IKoiOrderEmployeeService _service;
+        private readonly IKoiOrderRoleService _roleService;
 
-        public CreateModel(KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext context)
+        public CreateModel(IKoiOrderEmployeeService service, IKoiOrderRoleService roleService)
         {
-            _context = context;
+            _service = service;
+            _roleService = roleService;
         }
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-        ViewData["RoleId"] = new SelectList(_context.Roles, "RoleId", "RoleName");
+            var roles = await _roleService.GetAllRolesAsync();
+            ViewData["RoleId"] = new SelectList(roles, "RoleId", "RoleName");
             return Page();
         }
 
         [BindProperty]
         public KoiOrderEmployee KoiOrderEmployee { get; set; } = default!;
 
-        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
+                
+                var roles = await _roleService.GetAllRolesAsync();
+                ViewData["RoleId"] = new SelectList(roles, "RoleId", "RoleName");
                 return Page();
             }
 
-            _context.KoiOrderEmployees.Add(KoiOrderEmployee);
-            await _context.SaveChangesAsync();
+            
+            var result = await _service.AddEmployeeAsync(KoiOrderEmployee);
 
-            return RedirectToPage("./Index");
+            if (result)
+            {
+                
+                return RedirectToPage("./Index");
+            }
+            else
+            {
+                
+                ModelState.AddModelError(string.Empty, "Không thể thêm nhân viên. Vui lòng thử lại.");
+                
+                var roles = await _roleService.GetAllRolesAsync();
+                ViewData["RoleId"] = new SelectList(roles, "RoleId", "RoleName");
+                return Page();
+            }
+
         }
     }
 }

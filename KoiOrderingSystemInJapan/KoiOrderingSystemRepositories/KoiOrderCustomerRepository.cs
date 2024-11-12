@@ -17,11 +17,19 @@ namespace KoiOrderingSystem.Repositories
             _DbContext = DbContext;
         }
 
-        public bool AddKoiOrderCustomer(KoiOrderCustomer account)
+        public async Task<bool> AddKoiOrderCustomer(KoiOrderCustomer account)
         {
-            _DbContext.KoiOrderCustomers.Add(account);
-            _DbContext.SaveChanges();
-            return true;
+            try
+            {
+                
+                await _DbContext.KoiOrderCustomers.AddAsync(account);
+                await _DbContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public bool DelKoiOrderCustomer(int Id)

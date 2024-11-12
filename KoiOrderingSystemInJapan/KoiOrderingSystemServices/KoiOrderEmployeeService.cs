@@ -15,9 +15,9 @@ namespace KoiOrderingSystem.Services
             _employeeRepository = employeeRepository;
         }
 
-        public async Task<IEnumerable<KoiOrderEmployee>> GetAllEmployeesAsync()
+        public IQueryable<KoiOrderEmployee> KoiOrderEmployees()
         {
-            return await _employeeRepository.GetAllEmployeesAsync();
+            return _employeeRepository.GetAllKoiOrderEmployees();
         }
 
         public async Task<KoiOrderEmployee?> GetEmployeeByIdAsync(int employeeId)
@@ -44,5 +44,10 @@ namespace KoiOrderingSystem.Services
         {
             await _employeeRepository.SaveChangesAsync();
         }
+        public async Task<bool> EmployeeExistsAsync(int id)
+        {
+            return await _employeeRepository.EmployeeExistsAsync(id);
+        }
+
     }
 }

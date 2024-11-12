@@ -35,9 +35,15 @@ namespace KoiOrderingSystem.WebApplication.Pages.CustomerManagement
                 return Page();
             }
 
-            _service.AddKoiOrderCustomer(KoiOrderCustomer);
 
-            return RedirectToPage("./Index");
+            if (await _service.AddKoiOrderCustomer(KoiOrderCustomer))
+            {
+                
+                return RedirectToPage("./Index");
+            }
+
+            ModelState.AddModelError(string.Empty, "Không tạo được khách hàng. Vui lòng thử lại.");
+            return Page();
         }
     }
 }

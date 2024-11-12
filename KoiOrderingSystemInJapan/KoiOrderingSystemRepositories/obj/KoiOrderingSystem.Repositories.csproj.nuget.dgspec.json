@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystemRepositories\\KoiOrderingSystem.Repositories.csproj": {}
+    "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystemRepositories\\KoiOrderingSystem.Repositories.csproj": {}
   },
   "projects": {
-    "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystemRepositories\\KoiOrderingSystem.Repositories.csproj": {
+    "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystemRepositories\\KoiOrderingSystem.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystemRepositories\\KoiOrderingSystem.Repositories.csproj",
+        "projectUniqueName": "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystemRepositories\\KoiOrderingSystem.Repositories.csproj",
         "projectName": "KoiOrderingSystem.Repositories",
-        "projectPath": "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystemRepositories\\KoiOrderingSystem.Repositories.csproj",
+        "projectPath": "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystemRepositories\\KoiOrderingSystem.Repositories.csproj",
         "packagesPath": "C:\\Users\\brusl\\.nuget\\packages\\",
-        "outputPath": "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystemRepositories\\obj\\",
+        "outputPath": "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystemRepositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -13,7 +13,7 @@ namespace KoiOrderingSystem.Services.Interfaces
         Task<List<KoiOrderCustomer>> KoiOrderCustomers();
         Boolean DelKoiOrderCustomer(int Id);
         Boolean DelKoiOrderCustomer(KoiOrderCustomer account);
-        Boolean AddKoiOrderCustomer(KoiOrderCustomer account);
+        Task<bool> AddKoiOrderCustomer(KoiOrderCustomer account);
         Boolean UpdateKoiOrderCustomer(KoiOrderCustomer account);
         Task<KoiOrderCustomer> GetKoiOrderCustomerById(int Id);
 

@@ -6,16 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using KoiOrderingSystem.Repositories.Entities;
+using KoiOrderingSystem.Services.Interfaces;
 
 namespace KoiOrderingSystem.WebApplication.Pages.EmployeeManagement
 {
     public class DeleteModel : PageModel
     {
-        private readonly KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext _context;
+        private readonly IKoiOrderEmployeeService _service;
 
-        public DeleteModel(KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext context)
+        public DeleteModel(IKoiOrderEmployeeService service)
         {
-            _context = context;
+            _service = service;
         }
 
         [BindProperty]
@@ -28,16 +29,14 @@ namespace KoiOrderingSystem.WebApplication.Pages.EmployeeManagement
                 return NotFound();
             }
 
-            var koiorderemployee = await _context.KoiOrderEmployees.FirstOrDefaultAsync(m => m.EmployeeId == id);
+            var koiorderemployee = await _service.GetEmployeeByIdAsync(id.Value);
 
             if (koiorderemployee == null)
             {
                 return NotFound();
             }
-            else
-            {
-                KoiOrderEmployee = koiorderemployee;
-            }
+
+            KoiOrderEmployee = koiorderemployee;
             return Page();
         }
 
@@ -48,12 +47,11 @@ namespace KoiOrderingSystem.WebApplication.Pages.EmployeeManagement
                 return NotFound();
             }
 
-            var koiorderemployee = await _context.KoiOrderEmployees.FindAsync(id);
-            if (koiorderemployee != null)
+            var success = await _service.DeleteEmployeeAsync(id.Value);
+            if (!success)
             {
-                KoiOrderEmployee = koiorderemployee;
-                _context.KoiOrderEmployees.Remove(KoiOrderEmployee);
-                await _context.SaveChangesAsync();
+                ModelState.AddModelError(string.Empty, "Không xóa được nhân viên. Vui lòng thử lại.");
+                return Page();
             }
 
             return RedirectToPage("./Index");

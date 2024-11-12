@@ -6,11 +6,12 @@ namespace KoiOrderingSystem.Services.Interfaces
 {
     public interface IKoiOrderEmployeeService
     {
-        Task<IEnumerable<KoiOrderEmployee>> GetAllEmployeesAsync();
+        IQueryable<KoiOrderEmployee> KoiOrderEmployees();
         Task<KoiOrderEmployee?> GetEmployeeByIdAsync(int employeeId);
         Task<bool> AddEmployeeAsync(KoiOrderEmployee employee);
         Task<bool> UpdateEmployeeAsync(KoiOrderEmployee employee);
         Task<bool> DeleteEmployeeAsync(int employeeId);
         Task SaveChangesAsync();
+        Task<bool> EmployeeExistsAsync(int id);
     }
 }
