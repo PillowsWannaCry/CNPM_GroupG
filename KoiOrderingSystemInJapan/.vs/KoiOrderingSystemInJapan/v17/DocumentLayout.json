@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\H\u1ECDc\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{997C05F1-C457-4A82-92B3-10035999C5FA}|KoiOrderingSystem.WebApplication\\KoiOrderingSystem.WebApplication.csproj|d:\\h\u1ECDc\\cnpm\\website\\cnpm_groupg\\koiorderingsysteminjapan\\koiorderingsystem.webapplication\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{997C05F1-C457-4A82-92B3-10035999C5FA}|KoiOrderingSystem.WebApplication\\KoiOrderingSystem.WebApplication.csproj|solutionrelative:koiorderingsystem.webapplication\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\H\u1ECDc\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystem.WebApplication\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "KoiOrderingSystem.WebApplication\\Pages\\Index.cshtml",
+              "ToolTip": "D:\\H\u1ECDc\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystem.WebApplication\\Pages\\Index.cshtml",
+              "RelativeToolTip": "KoiOrderingSystem.WebApplication\\Pages\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T05:45:54.504Z",
+              "EditorCaption": ""
             }
           ]
         }
