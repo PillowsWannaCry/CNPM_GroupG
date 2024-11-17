@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Koi Fish Shop</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/KoiOrderingSystem.WebApplication.styles.css" asp-append-version="true" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Koi Fish Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#cart">Cart</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#login">Login</a></li>
+                    <li><a href="#search">Search Koi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section (Introduction to the koi farms) -->
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to the Koi Fish Shop</h2>
+            <p>Your one-stop destination for premium Koi fish straight from Japan's best farms. Explore our collection now!</p>
+            <a href="#shop" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop">
+        <div class="container">
+            <h2>Our Koi Collection</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="img KOI/h1.jpg" alt="Kohaku Koi">
+                    <h3>Kohaku</h3>
+                    <p class="price">$150</p>
+                    <button class="btn" onclick="addToCart('Kohaku', 150)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="sanke.jpg" alt="Sanke Koi">
+                    <h3>Sanke</h3>
+                    <p class="price">$200</p>
+                    <button class="btn" onclick="addToCart('Sanke', 200)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="showa.jpg" alt="Showa Koi">
+                    <h3>Showa</h3>
+                    <p class="price">$250</p>
+                    <button class="btn" onclick="addToCart('Showa', 250)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart">
+        <div class="container">
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <p>Your cart is empty.</p>
+            </div>
+            <button class="btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register">
+        <div class="container">
+            <h2>Register</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login">
+        <div class="container">
+            <h2>Login</h2>
+            <form>
+                <label for="email-login">Email:</label>
+                <input type="email" id="email-login" name="email-login" required>
+                <label for="password-login">Password:</label>
+                <input type="password" id="password-login" name="password-login" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Search Section (Koi Fish Search) -->
+    <section id="search">
+        <div class="container">
+            <h2>Search Koi Fish</h2>
+            <form id="search-form">
+                <label for="farm">Farm:</label>
+                <input type="text" id="farm" name="farm">
+                <label for="koi-type">Koi Type:</label>
+                <input type="text" id="koi-type" name="koi-type">
+                <label for="price-range">Price Range:</label>
+                <input type="text" id="price-range" name="price-range">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Koi Fish Shop | All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
