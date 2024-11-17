@@ -6,16 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using KoiOrderingSystem.Repositories.Entities;
+using KoiOrderingSystem.Services.Interfaces;
 
 namespace KoiOrderingSystem.WebApplication.Pages.ProductManagement
 {
     public class DeleteModel : PageModel
     {
-        private readonly KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext _context;
+        private readonly IProductService _productService;
 
-        public DeleteModel(KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext context)
+        public DeleteModel(IProductService productService)
         {
-            _context = context;
+            _productService = productService;
         }
 
         [BindProperty]
@@ -28,7 +29,7 @@ namespace KoiOrderingSystem.WebApplication.Pages.ProductManagement
                 return NotFound();
             }
 
-            var product = await _context.Products.FirstOrDefaultAsync(m => m.ProductId == id);
+            var product = await _productService.GetProductByIdAsync(id.Value);
 
             if (product == null)
             {
@@ -48,14 +49,12 @@ namespace KoiOrderingSystem.WebApplication.Pages.ProductManagement
                 return NotFound();
             }
 
-            var product = await _context.Products.FindAsync(id);
-            if (product != null)
+            var success = await _productService.DeleteProductAsync(id.Value);
+            if (!success)
             {
-                Product = product;
-                _context.Products.Remove(Product);
-                await _context.SaveChangesAsync();
+                ModelState.AddModelError(string.Empty, "Không xóa được!. Vui lòng thử lại.");
+                return Page();
             }
-
             return RedirectToPage("./Index");
         }
     }

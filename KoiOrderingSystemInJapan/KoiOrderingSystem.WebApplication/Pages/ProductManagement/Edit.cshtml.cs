@@ -7,16 +7,22 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using KoiOrderingSystem.Repositories.Entities;
+using KoiOrderingSystem.Services.Interfaces;
+using KoiOrderingSystem.Services;
 
 namespace KoiOrderingSystem.WebApplication.Pages.ProductManagement
 {
     public class EditModel : PageModel
     {
-        private readonly KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext _context;
+        private readonly IProductService _productService;
+        private readonly ICategoryService _categoryService;
+        private readonly ISupplierService  _supplierService;
 
-        public EditModel(KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext context)
+        public EditModel(IProductService productService, ICategoryService categoryService, ISupplierService supplierService)
         {
-            _context = context;
+            _productService = productService;  
+            _categoryService = categoryService;
+            _supplierService = supplierService; 
         }
 
         [BindProperty]
@@ -29,50 +35,50 @@ namespace KoiOrderingSystem.WebApplication.Pages.ProductManagement
                 return NotFound();
             }
 
-            var product =  await _context.Products.FirstOrDefaultAsync(m => m.ProductId == id);
+            var product = await _productService.GetProductByIdAsync(id.Value);
             if (product == null)
             {
                 return NotFound();
             }
             Product = product;
-           ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Name");
-           ViewData["SupplierId"] = new SelectList(_context.Suppliers, "SupplierId", "Name");
+
+
+            var category = await _categoryService.GetAllCategoriesAsync();
+            ViewData["CategoryId"] = new SelectList(category, "CategoryId", "Name");
+            var supplier = await _supplierService.GetAllSuppliersAsync();
+            ViewData["SupplierId"] = new SelectList(supplier, "SupplierId", "Name");
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
+                var category = await _categoryService.GetAllCategoriesAsync();
+                ViewData["CategoryId"] = new SelectList(category, "CategoryId", "Name");
+                var supplier = await _supplierService.GetAllSuppliersAsync();
+                ViewData["SupplierId"] = new SelectList(supplier, "SupplierId", "Name");
                 return Page();
             }
 
-            _context.Attach(Product).State = EntityState.Modified;
+            var updateResult = await _productService.UpdateProductAsync(Product);
 
-            try
+            if (!updateResult)
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProductExists(Product.ProductId))
+                if (!await _productService.ProductExistsAsync(Product.ProductId))
                 {
                     return NotFound();
                 }
                 else
                 {
-                    throw;
+                    ModelState.AddModelError(string.Empty, "Cập nhật thất bại. Vui lòng thử lại.");
+                    return Page();
                 }
             }
 
             return RedirectToPage("./Index");
         }
 
-        private bool ProductExists(int id)
-        {
-            return _context.Products.Any(e => e.ProductId == id);
-        }
+        
     }
 }

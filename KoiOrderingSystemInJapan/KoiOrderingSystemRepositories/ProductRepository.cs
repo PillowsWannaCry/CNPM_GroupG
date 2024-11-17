@@ -15,11 +15,6 @@ namespace KoiOrderingSystem.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Product>> GetAllProductsAsync()
-        {
-            return await _context.Products.ToListAsync();
-        }
-
         public async Task<Product?> GetProductByIdAsync(int productId)
         {
             return await _context.Products.FindAsync(productId);
@@ -48,6 +43,17 @@ namespace KoiOrderingSystem.Repositories
         public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<bool> ProductExistsAsync(int id)
+        {
+            return await _context.Products.AnyAsync(e => e.ProductId == id);
+        }
+
+        public IQueryable<Product> GetAllProducts()
+        {
+            return _context.Products.AsQueryable();
+
         }
     }
 }

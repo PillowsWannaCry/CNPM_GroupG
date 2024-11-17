@@ -1,20 +1,15 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\H\u1ECDc\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{997C05F1-C457-4A82-92B3-10035999C5FA}|KoiOrderingSystem.WebApplication\\KoiOrderingSystem.WebApplication.csproj|d:\\h\u1ECDc\\cnpm\\website\\cnpm_groupg\\koiorderingsysteminjapan\\koiorderingsystem.webapplication\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{997C05F1-C457-4A82-92B3-10035999C5FA}|KoiOrderingSystem.WebApplication\\KoiOrderingSystem.WebApplication.csproj|solutionrelative:koiorderingsystem.webapplication\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 210,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -23,19 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\H\u1ECDc\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystem.WebApplication\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "KoiOrderingSystem.WebApplication\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\H\u1ECDc\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystem.WebApplication\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "KoiOrderingSystem.WebApplication\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAEcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-16T05:54:17.099Z",
-              "EditorCaption": ""
             }
           ]
         }

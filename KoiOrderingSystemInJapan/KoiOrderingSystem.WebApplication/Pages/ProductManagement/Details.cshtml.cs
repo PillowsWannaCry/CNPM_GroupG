@@ -6,16 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using KoiOrderingSystem.Repositories.Entities;
+using KoiOrderingSystem.Services.Interfaces;
 
 namespace KoiOrderingSystem.WebApplication.Pages.ProductManagement
 {
     public class DetailsModel : PageModel
     {
-        private readonly KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext _context;
+        private readonly IProductService _productService;
 
-        public DetailsModel(KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext context)
+        public DetailsModel(IProductService productService)
         {
-            _context = context;
+            _productService = productService;
         }
 
         public Product Product { get; set; } = default!;
@@ -27,7 +28,7 @@ namespace KoiOrderingSystem.WebApplication.Pages.ProductManagement
                 return NotFound();
             }
 
-            var product = await _context.Products.FirstOrDefaultAsync(m => m.ProductId == id);
+            var product = await _productService.GetProductByIdAsync(id.Value);
             if (product == null)
             {
                 return NotFound();
