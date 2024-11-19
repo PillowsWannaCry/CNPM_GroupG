@@ -10,4 +10,10 @@ Danh sách thành viên tham gia dự án
 | 5. | Lê Hoài Nam | 030205003196|
 | 6. | Trịnh Bửu Châu | 089205015280 |
 
-# Template
+# Template Users
+
+# Template Admin
+Giao diện trang chính Admin:
+![image](https://github.com/user-attachments/assets/1c268171-59ef-4575-8d14-63cdbc97e631)
+Link template: https://themekita.com/demo-kaiadmin-lite-bootstrap-dashboard/livepreview/demo1/
+
