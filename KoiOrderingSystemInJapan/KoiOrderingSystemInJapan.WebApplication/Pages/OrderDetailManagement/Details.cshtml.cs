@@ -8,18 +8,18 @@ using Microsoft.EntityFrameworkCore;
 using KoiOrderingSystem.Repositories.Entities;
 using KoiOrderingSystem.Services.Interfaces;
 
-namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
+namespace KoiOrderingSystemInJapan.WebApplication.Pages.OrderDetailManagement
 {
     public class DetailsModel : PageModel
     {
-        private readonly IKoiOrderService _service;
+        private readonly IKoiOrderDetailService _service;
 
-        public DetailsModel(IKoiOrderService service)
+        public DetailsModel(IKoiOrderDetailService service)
         {
             _service = service;
         }
 
-        public Order Order { get; set; } = default!;
+        public OrderDetail OrderDetail { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,14 +28,14 @@ namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
                 return NotFound();
             }
 
-            var order = await _service.GetOrderByIdAsync(id.Value);
-            if (order == null)
+            var orderdetail = await _service.GetOrderDetailByIdAsync(id.Value);
+            if (orderdetail == null)
             {
                 return NotFound();
             }
             else
             {
-                Order = order;
+                OrderDetail = orderdetail;
             }
             return Page();
         }

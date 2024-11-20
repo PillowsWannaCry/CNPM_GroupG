@@ -8,19 +8,19 @@ using Microsoft.EntityFrameworkCore;
 using KoiOrderingSystem.Repositories.Entities;
 using KoiOrderingSystem.Services.Interfaces;
 
-namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
+namespace KoiOrderingSystemInJapan.WebApplication.Pages.OrderDetailManagement
 {
     public class DeleteModel : PageModel
     {
-        private readonly IKoiOrderService _service;
+        private readonly IKoiOrderDetailService _service;
 
-        public DeleteModel(IKoiOrderService service)
+        public DeleteModel(IKoiOrderDetailService service)
         {
             _service = service;
         }
 
         [BindProperty]
-        public Order Order { get; set; } = default!;
+        public OrderDetail OrderDetail { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,15 +29,15 @@ namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
                 return NotFound();
             }
 
-            var order = await _service.GetOrderByIdAsync(id.Value);
+            var orderdetail = await _service.GetOrderDetailByIdAsync(id.Value);
 
-            if (order == null)
+            if (orderdetail == null)
             {
                 return NotFound();
             }
             else
             {
-                Order = order;
+                OrderDetail = orderdetail;
             }
             return Page();
         }
@@ -49,8 +49,8 @@ namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
                 return NotFound();
             }
 
-            var order = await _service.DeleteOrderAsync(id.Value);
-            if (!order)
+            var orderdetail = await _service.DeleteOrderDetailAsync(id.Value);
+            if (!orderdetail)
             {
                 ModelState.AddModelError(string.Empty, "Không xóa được nhân viên. Vui lòng thử lại.");
                 return Page();
