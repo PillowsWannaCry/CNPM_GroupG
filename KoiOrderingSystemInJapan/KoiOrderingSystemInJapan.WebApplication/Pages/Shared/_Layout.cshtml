@@ -22,9 +22,44 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
+                        
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" id="managementDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Management
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="managementDropdown">
+                                    <li><a class="dropdown-item" asp-area="" asp-page="/CustomerManagement/Index">Customer Management</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-page="/EmployeeManagement/Index">Employee Management</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-page="/ProductManagement/Index">Product Management</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-page="/OrderManagement/Index">Order Management</a></li>
+                                </ul>
+                            </li>
+                        }
+                        
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Feedback">Feedback</a>
                         </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Account/Logout">Logout (@User.Identity.Name)</a>
+                            </li>
+
+                            
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Account/Login">Login</a>
+                            </li>
+
+                          
+                        }
                     </ul>
                 </div>
             </div>

@@ -4112,11 +4112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystem.Repositories\\KoiOrderingSystem.Repositories.csproj",
+      "projectUniqueName": "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystem.Repositories\\KoiOrderingSystem.Repositories.csproj",
       "projectName": "KoiOrderingSystem.Repositories",
-      "projectPath": "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystem.Repositories\\KoiOrderingSystem.Repositories.csproj",
+      "projectPath": "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystem.Repositories\\KoiOrderingSystem.Repositories.csproj",
       "packagesPath": "C:\\Users\\brusl\\.nuget\\packages\\",
-      "outputPath": "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystem.Repositories\\obj\\",
+      "outputPath": "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystem.Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

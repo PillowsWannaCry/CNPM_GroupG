@@ -6,30 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using KoiOrderingSystem.Repositories.Entities;
-using KoiOrderingSystem.Services.Interfaces;
-using KoiOrderingSystem.Services;
 
 namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
 {
     public class CreateModel : PageModel
     {
-        private readonly IKoiOrderService _service;
-        private readonly KoiOrderCustomerService _Customerservice;
+        private readonly KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext _context;
 
-        public CreateModel(IKoiOrderService service, KoiOrderCustomerService Customerservice)
+        public CreateModel(KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext context)
         {
-            _service = service;
-            _Customerservice = Customerservice;
+            _context = context;
         }
 
-        public async Task<IActionResult> OnGetAsync()
+        public IActionResult OnGet()
         {
-            // Lấy danh sách tất cả khách hàng từ dịch vụ
-            var customers = await _Customerservice.KoiOrderCustomers();
-
-            // Tạo danh sách dropdown từ kết quả
-            ViewData["CustomerId"] = new SelectList(customers, "CustomerId", "Name");
-
+        ViewData["CustomerId"] = new SelectList(_context.KoiOrderCustomers, "CustomerId", "Password");
             return Page();
         }
 
@@ -41,21 +32,11 @@ namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
         {
             if (!ModelState.IsValid)
             {
-                // Lấy lại danh sách khách hàng để hiển thị nếu có lỗi
-                var customers = await _Customerservice.KoiOrderCustomers();
-                ViewData["CustomerId"] = new SelectList(customers, "CustomerId", "Name");
-
                 return Page();
             }
 
-            // Thêm đơn hàng qua dịch vụ
-            var result = await _service.AddOrderAsync(Order);
-
-            if (!result)
-            {
-                ModelState.AddModelError(string.Empty, "Thêm đơn hàng thất bại. Vui lòng thử lại.");
-                return Page();
-            }
+            _context.Orders.Add(Order);
+            await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
         }

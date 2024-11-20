@@ -6,17 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using KoiOrderingSystem.Repositories.Entities;
-using KoiOrderingSystem.Services.Interfaces;
 
 namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
 {
     public class DetailsModel : PageModel
     {
-        private readonly IKoiOrderService _service;
+        private readonly KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext _context;
 
-        public DetailsModel(IKoiOrderService service)
+        public DetailsModel(KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext context)
         {
-            _service = service;
+            _context = context;
         }
 
         public Order Order { get; set; } = default!;
@@ -28,7 +27,7 @@ namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
                 return NotFound();
             }
 
-            var order = await _service.GetOrderByIdAsync(id.Value);
+            var order = await _context.Orders.FirstOrDefaultAsync(m => m.OrderId == id);
             if (order == null)
             {
                 return NotFound();

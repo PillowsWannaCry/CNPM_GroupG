@@ -9,119 +9,127 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KoiOrderingSystemInJapan.WebApplication
 build_property.RootNamespace = KoiOrderingSystemInJapan.WebApplication
-build_property.ProjectDir = D:\Học\CNPM\WebSite\KoiOrderingSystemInJapan\KoiOrderingSystemInJapan.WebApplication\
+build_property.ProjectDir = D:\Học\CNPM\WebSite\CNPM_GroupG\KoiOrderingSystemInJapan\KoiOrderingSystemInJapan.WebApplication\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Học\CNPM\WebSite\KoiOrderingSystemInJapan\KoiOrderingSystemInJapan.WebApplication
+build_property.MSBuildProjectDirectory = D:\Học\CNPM\WebSite\CNPM_GroupG\KoiOrderingSystemInJapan\KoiOrderingSystemInJapan.WebApplication
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/CustomerManagement/Create.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/CustomerManagement/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJNYW5hZ2VtZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/CustomerManagement/Delete.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/CustomerManagement/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJNYW5hZ2VtZW50XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/CustomerManagement/Details.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/CustomerManagement/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJNYW5hZ2VtZW50XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/CustomerManagement/Edit.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/CustomerManagement/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJNYW5hZ2VtZW50XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/CustomerManagement/Index.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/CustomerManagement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJNYW5hZ2VtZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/EmployeeManagement/Create.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/EmployeeManagement/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVNYW5hZ2VtZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/EmployeeManagement/Delete.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/EmployeeManagement/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVNYW5hZ2VtZW50XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/EmployeeManagement/Details.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/EmployeeManagement/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVNYW5hZ2VtZW50XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/EmployeeManagement/Edit.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/EmployeeManagement/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVNYW5hZ2VtZW50XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/EmployeeManagement/Index.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/EmployeeManagement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVNYW5hZ2VtZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Error.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Index.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/OrderManagement/Create.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/OrderManagement/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJNYW5hZ2VtZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/OrderManagement/Delete.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/OrderManagement/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJNYW5hZ2VtZW50XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/OrderManagement/Details.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/OrderManagement/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJNYW5hZ2VtZW50XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/OrderManagement/Edit.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/OrderManagement/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJNYW5hZ2VtZW50XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/OrderManagement/Index.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/OrderManagement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJNYW5hZ2VtZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Privacy.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/ProductManagement/Create.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/ProductManagement/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdE1hbmFnZW1lbnRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/ProductManagement/Delete.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/ProductManagement/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdE1hbmFnZW1lbnRcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/ProductManagement/Details.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/ProductManagement/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdE1hbmFnZW1lbnRcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/ProductManagement/Edit.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/ProductManagement/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdE1hbmFnZW1lbnRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/ProductManagement/Index.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/ProductManagement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdE1hbmFnZW1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/_ViewImports.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/_ViewStart.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Học/CNPM/WebSite/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Shared/_Layout.cshtml]
+[D:/Học/CNPM/WebSite/CNPM_GroupG/KoiOrderingSystemInJapan/KoiOrderingSystemInJapan.WebApplication/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ufh7cslg5f

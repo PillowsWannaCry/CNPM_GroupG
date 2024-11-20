@@ -7,20 +7,16 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using KoiOrderingSystem.Repositories.Entities;
-using KoiOrderingSystem.Services.Interfaces;
-using KoiOrderingSystem.Services;
 
 namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
 {
     public class EditModel : PageModel
     {
-        private readonly IKoiOrderService _service;
-        private readonly KoiOrderCustomerService _Customerservice;
+        private readonly KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext _context;
 
-        public EditModel(IKoiOrderService service, KoiOrderCustomerService Customerservice)
+        public EditModel(KoiOrderingSystem.Repositories.Entities.KoiOrderingSystemContext context)
         {
-            _service = service;
-            _Customerservice = Customerservice;
+            _context = context;
         }
 
         [BindProperty]
@@ -33,16 +29,13 @@ namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
                 return NotFound();
             }
 
-            var order = await _service.GetOrderByIdAsync(id.Value);
+            var order =  await _context.Orders.FirstOrDefaultAsync(m => m.OrderId == id);
             if (order == null)
             {
                 return NotFound();
             }
             Order = order;
-
-
-            var customers = await _Customerservice.KoiOrderCustomers();
-            ViewData["CustomerId"] = new SelectList(customers, "CustomerId", "Name");
+           ViewData["CustomerId"] = new SelectList(_context.KoiOrderCustomers, "CustomerId", "Password");
             return Page();
         }
 
@@ -52,24 +45,33 @@ namespace KoiOrderingSystem.WebApplication.Pages.OrderManagement
         {
             if (!ModelState.IsValid)
             {
-                var customers = await _Customerservice.KoiOrderCustomers();
-                ViewData["CustomerId"] = new SelectList(customers, "CustomerId", "Name");
                 return Page();
             }
 
-            var result = await _service.UpdateOrderAsync(Order);
+            _context.Attach(Order).State = EntityState.Modified;
 
-            if (!result)
+            try
             {
-                ModelState.AddModelError(string.Empty, "Cập nhật đơn hàng thất bại. Vui lòng thử lại.");
-
-                // Tải lại danh sách khách hàng nếu lỗi
-                var customers = await _Customerservice.KoiOrderCustomers();
-                ViewData["CustomerId"] = new SelectList(customers, "CustomerId", "Name");
-                return Page();
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!OrderExists(Order.OrderId))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
             }
 
             return RedirectToPage("./Index");
+        }
+
+        private bool OrderExists(int id)
+        {
+            return _context.Orders.Any(e => e.OrderId == id);
         }
     }
 }

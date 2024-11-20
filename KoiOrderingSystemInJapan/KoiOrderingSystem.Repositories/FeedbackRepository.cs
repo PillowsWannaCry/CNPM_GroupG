@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -44,16 +44,6 @@ namespace KoiOrderingSystem.Repositories
                 _context.Feedbacks.Remove(feedback);
                 await _context.SaveChangesAsync();
             }
-        }
-
-        public IQueryable<Feedback> GetAllFeedbacks()
-        {
-            return _context.Feedbacks.AsQueryable();
-        }
-
-        public async Task<Feedback> GetFeedbackById(int id)
-        {
-            return await _context.Feedbacks.FirstOrDefaultAsync(p => p.FeedbackId == id);
         }
     }
 }
