@@ -33,6 +33,8 @@ builder.Services.AddScoped<IFeedbackRepository, FeedbackRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
 // DI   Service
 builder.Services.AddScoped<IKoiOrderCustomerService, KoiOrderCustomerService>();
@@ -42,6 +44,8 @@ builder.Services.AddScoped<IFeedbackService, FeedbackService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IKoiOrderDetailService, KoiOrderDetailService>();
+builder.Services.AddScoped<IKoiOrderService, KoiOrderService>();
 var app = builder.Build();
 
 

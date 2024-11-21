@@ -37,6 +37,7 @@
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="~/admin/assets/css/demo.css" />
 </head>
+@RenderSection("Scripts", required: false)
 <body>
     <div class="wrapper">
         <!-- Sidebar -->
@@ -90,23 +91,39 @@
                         <li class="nav-item">
                             <a data-bs-toggle="collapse" href="#base">
                                 <i class="fas fa-layer-group"></i>
-                                <p>Khách hàng</p>
+                                <p>AdminManagement</p>
                                 <span class="caret"></span>
                             </a>
                             <div class="collapse" id="base">
                                 <ul class="nav nav-collapse">
+                                    
                                     <li>
-                                        <a href="components/avatars.html">
-                                            <span class="sub-item">Quá trình mua</span>
+                                        <a href="/Admin/CustomerManagement">
+                                            <span class="sub-item">Customer Management</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="components/buttons.html">
-                                            <span class="sub-item">Rating</span>
+                                        <a href="/Admin/EmployeeManagement">
+                                            <span class="sub-item">Employee Management</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="components/gridsystem.html">
+                                        <a href="/Admin/ProductManagement">
+                                            <span class="sub-item">Product Management</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Admin/OrderManagement">
+                                            <span class="sub-item">Order Management</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Admin/OrderDetailManagement">
+                                            <span class="sub-item">OrderDetail Management</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Admin/FeedBack">
                                             <span class="sub-item">Feedback</span>
                                         </a>
                                     </li>
@@ -717,4 +734,7 @@
         });
     </script>
 </body>
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}
 </html>
