@@ -1,86 +1,242 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - KoiOrderingSystemInJapan.WebApplication</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/KoiOrderingSystemInJapan.WebApplication.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogani | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">KoiOrderingSystemInJapan.WebApplication</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" id="managementDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Management
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="managementDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-page="/CustomerManagement/Index">Customer Management</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-page="/EmployeeManagement/Index">Employee Management</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-page="/ProductManagement/Index">Product Management</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-page="/OrderManagement/Index">Order Management</a></li>
-                                </ul>
-                            </li>
-                        }
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Feedback">Feedback</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/Account/Logout">Logout (@User.Identity.Name)</a>
-                            </li>
-
-                            
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-page="/Account/Login">Login</a>
-                            </li>
-
-                          
-                        }
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            </ul>
+            <div class="header__cart__price">item: <span>$150.00</span></div>
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <img src="img/language.png" alt="">
+                <div>English</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Spanis</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="header__top__right__auth">
+                <a href="#"><i class="fa fa-user"></i> Login</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li class="active"><a href="./shop-grid.html">Shop</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> nguyenhanam@colorlib.com</li>
+                <li>Miễn Phí Vận Chuyển Các Sản Phẩm Cá Koi </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> CaKoiShop@colorlib.com</li>
+                                <li>Miễn Phí Vận Chuyển Các Sản Phẩm Cá Koi</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__language">
+                                <div class="header__top__right__auth">
+                                    <a asp-area="" asp-page="Register"><i class="fa fa-user-plus"></i> Register</a>
+                                </div>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a asp-area="" asp-page="/Admin/Login"><i class="fa fa-user"></i> Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
-            &copy; 2024 - KoiOrderingSystemInJapan.WebApplication - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo-ca-Koi-23.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a asp-area="" asp-page="Index">Home</a></li>
+                            <li><a asp-area="" asp-page="Shop">Shop</a></li>
+                            <li><a asp-area="" asp-page="Blog">Blog</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__cart">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Tất Cả Các Danh Mục</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">Cá Koi</a></li>
+                            <li><a href="#">Hồ Cá</a></li>
+                            <li><a href="#">Sản Phẩm Trang Trí</a></li>
+                            <li><a href="#">Thức Ăn Cho Cá</a></li>
+                            <li><a href="#">Thiết Bị</a></li>
+                            <li><a href="#">Phụ Kiện </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9" style="transform: translateY(-130px);">
+                    <div class="hero__search">
+                    </div>
+                    <div class="hero__item set-bg" data-setbg="img/hero/banner.png">
+                        <div class="hero__text">
+                            <span>CÁ KOI</span>
+                            <h2> Cá Koi <br />100% From JP</h2>
+                            <p>Có dịch vụ nhận và giao hàng miễn phí</p>
+                            <a href="#" class="primary-btn">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- Categories Section Begin -->
+    <!-- Categories Section End -->
+    <!-- Featured Section Begin -->
+    @RenderBody()
+
+    <!-- Featured Section End -->
+    <!-- Banner Begin -->
+    <!-- Banner End -->
+    <!-- Latest Product Section Begin -->
+    <!-- Latest Product Section End -->
+    <!-- Blog Section Begin -->
+    <!-- Blog Section End -->
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo-ca-koi-24.jpg" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Address:142 Nguyễn Văn Hưởng, Thảo Điền, Quận 2, Hồ Chí Minh </li>
+                            <li>Phone: +84 0908096030</li>
+                            <li>Email: CaKoiShop@colorlib.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Liên Kết Hũu Ích</h6>
+                        <ul>
+                            <li><a href="#">Giới Thiệu</a></li>
+                            <li><a href="#">Giới Thiệu Cửa Hàng</a></li>
+                            <li><a href="#">Dịch Vụ</a></li>
+                            <li><a href="#">Thông Tin Giao Hàng</a></li>
+                            <li><a href="#">Điều Khoản Chính Sách</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                        <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- Footer Section End -->
+    <!-- Js Plugins -->
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/mixitup.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

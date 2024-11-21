@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0AVSUPLkGZQRiDy17mr81EIOJWD3RCgSK2lFyOEM658DsChCrbPotHahnzcJFdStwZD6JfjiY+XnB+4jfyLabQ==",
+  "dgSpecHash": "VPo8OwT/4yoPkJEn2IIYrSxihrDJvdOm4HnKTgCFUDEDMyBa/sVW4vqc05kJrh1shTNyGedNslBfcv8Fn/tavQ==",
   "success": true,
-  "projectFilePath": "D:\\Học\\CNPM\\WebSite\\CNPM_GroupG\\KoiOrderingSystemInJapan\\KoiOrderingSystem.Services\\KoiOrderingSystem.Services.csproj",
+  "projectFilePath": "D:\\Học\\CNPM\\WebSite\\KoiOrderingSystemInJapan\\KoiOrderingSystem.Services\\KoiOrderingSystem.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brusl\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\brusl\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

@@ -1,0 +1,42 @@
+﻿@page
+@model KoiOrderingSystemInJapan.WebApplication.Pages.Account.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div style="width: 400px; margin: 50px auto; font-family: Arial, sans-serif; border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h2 style="text-align: center; font-size: 24px; margin-bottom: 20px; color: #333;">Login</h2>
+    <form method="post">
+        <!-- Username -->
+        <div style="margin-bottom: 15px;">
+            <label for="Username" style="display: block; font-size: 16px; margin-bottom: 5px;">Username</label>
+            <input type="text" id="Username" name="Input.Username" value="@Model.Input.Username" required
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;" />
+        </div>
+        <!-- Password -->
+        <div style="margin-bottom: 15px;">
+            <label for="Password" style="display: block; font-size: 16px; margin-bottom: 5px;">Password</label>
+            <input type="password" id="Password" name="Input.Password" required
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;" />
+        </div>
+        <!-- Error Message -->
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div style="margin-bottom: 15px; padding: 10px; color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 5px;">
+                @Model.ErrorMessage
+            </div>
+        }
+        <!-- Submit Button -->
+        <button type="submit" style="width: 100%; padding: 12px; background-color: #007bff; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+            Login
+        </button>
+        <p style="text-align: center; margin-top: 15px; font-size: 14px; color: #555;">
+            Don't have an account? <a href="Register" style="color: #007BFF; text-decoration: none;">Sign up here</a>
+        </p>
+    </form>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger mt-3">@Model.ErrorMessage</div>
+}

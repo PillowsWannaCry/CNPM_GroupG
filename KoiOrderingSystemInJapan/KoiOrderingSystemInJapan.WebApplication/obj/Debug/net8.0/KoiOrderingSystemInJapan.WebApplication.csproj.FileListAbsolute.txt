@@ -147,3 +147,5 @@ D:\Học\CNPM\WebSite\CNPM_GroupG\KoiOrderingSystemInJapan\KoiOrderingSystemInJa
 D:\Học\CNPM\WebSite\CNPM_GroupG\KoiOrderingSystemInJapan\KoiOrderingSystemInJapan.WebApplication\obj\Debug\net8.0\KoiOrderingSystemInJapan.WebApplication.pdb
 D:\Học\CNPM\WebSite\CNPM_GroupG\KoiOrderingSystemInJapan\KoiOrderingSystemInJapan.WebApplication\obj\Debug\net8.0\KoiOrderingSystemInJapan.WebApplication.genruntimeconfig.cache
 D:\Học\CNPM\WebSite\CNPM_GroupG\KoiOrderingSystemInJapan\KoiOrderingSystemInJapan.WebApplication\obj\Debug\net8.0\ref\KoiOrderingSystemInJapan.WebApplication.dll
+D:\Học\CNPM\WebSite\CNPM_GroupG\KoiOrderingSystemInJapan\KoiOrderingSystemInJapan.WebApplication\obj\Debug\net8.0\scopedcss\Pages\Admin\_LayoutAdmin.cshtml.rz.scp.css
+D:\Học\CNPM\WebSite\KoiOrderingSystemInJapan\KoiOrderingSystemInJapan.WebApplication\obj\Debug\net8.0\scopedcss\Pages\Admin\_LayoutAdmin.cshtml.rz.scp.css

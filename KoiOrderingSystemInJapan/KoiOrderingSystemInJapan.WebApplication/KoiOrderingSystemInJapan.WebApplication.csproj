@@ -11,10 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\CustomerManagement\" />
-    <Folder Include="Pages\EmployeeManagement\" />
-    <Folder Include="Pages\ProductManagement\" />
-    <Folder Include="Pages\OrderManagement\" />
+    <Folder Include="Pages\Admin\CustomerManagement\" />
+    <Folder Include="Pages\Admin\EmployeeManagement\" />
+    <Folder Include="Pages\Admin\ProductManagement\" />
+    <Folder Include="Pages\Admin\OrderManagement\" />
   </ItemGroup>
 
 </Project>
